@@ -1,3 +1,6 @@
+* {
+  scroll-behavior: smooth;
+}
 body {
   padding: 0;
   margin: 0;
@@ -45,6 +48,9 @@ body {
   font-size: 36px;
   color: #828283;
   margin: 6px 0;
+  &:hover {
+    color: #fff;
+  }
 }
 nav {
   z-index: 100;
@@ -120,8 +126,8 @@ h1 {
   margin: auto;
   background-image: linear-gradient(120deg, #34e0f0 0%, #b400ff 100%);
   border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
-  width: 250px;
-  padding: 16px;
+  width: 300px;
+  padding: 48px;
   padding-bottom: 44px;
   animation: morph 3s linear infinite;
   transform-style: preserve-3d;
@@ -193,6 +199,7 @@ h1 {
 .gooey-content {
   transform: translate3d(0px, 30px, 1px);
   text-align: center;
+
   h4 {
     font-size: 24px;
     font-weight: 500;
@@ -202,14 +209,14 @@ h1 {
     margin: 4px;
 
     img {
-      width: 28px;
+      width: 48px;
       margin: auto;
     }
 
     h6 {
       padding-top: 8px;
-      font-size: 14px;
-      font-weight: 400;
+      font-size: 16px;
+      font-weight: 300;
     }
   }
 }
@@ -290,7 +297,7 @@ h1 {
     background: #333;
     color: #fff;
     border-radius: 10px;
-    padding: 10px;
+    padding: 16px 24px;
   }
 
   /* Title of the card */
@@ -326,12 +333,12 @@ h1 {
 
   /* setting dot to the left if the card is odd */
   .timeline-card:nth-child(odd) > .info > .title-1::before {
-    left: -45px;
+    left: -60px;
   }
 
   /* setting dot to the right if the card is odd */
   .timeline-card:nth-child(even) > .info > .title-1::before {
-    right: -45px;
+    right: -60px;
   }
 }
 .div-project {
@@ -341,10 +348,16 @@ h1 {
 
   .project-menu {
     width: 250px;
-    height: 100%;
+    height: fit-content;
+
     // border: 1px solid blue;
     list-style: none;
     padding-left: 0;
+    background-color: #0003;
+
+    border-top-left-radius: 32px;
+    border-bottom-left-radius: 32px;
+
     li {
       // height: max-content;
       font-weight: 500;
@@ -356,6 +369,12 @@ h1 {
       // background-color: #333333;
       border-top-left-radius: 32px;
       border-bottom-left-radius: 32px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #0d6efd;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      }
     }
     li:first-child {
       background-color: #0d6efd;

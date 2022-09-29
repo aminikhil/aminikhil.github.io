@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Exo+2");
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -56,6 +60,9 @@ body {
   font-size: 36px;
   color: #828283;
   margin: 6px 0;
+}
+.nav-icon:hover {
+  color: #fff;
 }
 
 nav {
@@ -135,8 +142,8 @@ h1 {
   margin: auto;
   background-image: linear-gradient(120deg, #34e0f0 0%, #b400ff 100%);
   border-radius: 42% 58% 70% 30%/45% 45% 55% 55%;
-  width: 250px;
-  padding: 16px;
+  width: 300px;
+  padding: 48px;
   padding-bottom: 44px;
   -webkit-animation: morph 3s linear infinite;
           animation: morph 3s linear infinite;
@@ -237,13 +244,13 @@ h1 {
   margin: 4px;
 }
 .gooey-content div img {
-  width: 28px;
+  width: 48px;
   margin: auto;
 }
 .gooey-content div h6 {
   padding-top: 8px;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 300;
 }
 
 /* Timeline Container */
@@ -320,7 +327,7 @@ h1 {
   background: #333;
   color: #fff;
   border-radius: 10px;
-  padding: 10px;
+  padding: 16px 24px;
 }
 .timeline .title-1 {
   color: #fff;
@@ -349,10 +356,10 @@ h1 {
   text-align: right;
 }
 .timeline .timeline-card:nth-child(odd) > .info > .title-1::before {
-  left: -45px;
+  left: -60px;
 }
 .timeline .timeline-card:nth-child(even) > .info > .title-1::before {
-  right: -45px;
+  right: -60px;
 }
 
 .div-project {
@@ -361,9 +368,14 @@ h1 {
 }
 .div-project .project-menu {
   width: 250px;
-  height: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   list-style: none;
   padding-left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 32px;
+  border-bottom-left-radius: 32px;
 }
 .div-project .project-menu li {
   font-weight: 500;
@@ -373,6 +385,11 @@ h1 {
   margin-left: 0;
   border-top-left-radius: 32px;
   border-bottom-left-radius: 32px;
+  cursor: pointer;
+}
+.div-project .project-menu li:hover {
+  background-color: #0d6efd;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 .div-project .project-menu li:first-child {
   background-color: #0d6efd;
