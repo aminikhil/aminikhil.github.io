@@ -16,15 +16,6 @@
       rel="stylesheet"
     />
 
-    <!-- Ionicons  -->
-    <!-- <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script> -->
     <!-- Font Awesome -->
     <script
       src="https://kit.fontawesome.com/ecc4fcc71f.js"
@@ -48,6 +39,9 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <!-- Blob -->
     <link rel="stylesheet" href="css/blobz.min.css" />
+    <script src="js/master.js"></script>
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <div class="main">
@@ -87,7 +81,7 @@
         </div>
       </div>
       <div class="main-content">
-        <nav>
+        <nav data-aos="zoom-in">
           <div>
             <a href="#home" class="nav-link">
               <i class="fa-solid fa-terminal"></i>
@@ -102,10 +96,10 @@
             <a href="assets/Nikhil_Waykos-Resume.pdf" class="nav-link" download>
               Download Resume
             </a>
-            <a href="#" class="nav-link">Contact Me</a>
+            <a href="#contact" class="nav-link">Contact Me</a>
           </div>
         </nav>
-        <div class="container content-div">
+        <div id="scroll-container" class="container content-div">
           <div id="home" class="row h-100 align-items-center pt-4">
             <div class="col col-lg-4 mx-auto">
               <lottie-player
@@ -127,7 +121,7 @@
               </h1>
               <a
                 type="button"
-                class="btn btn-primary px-4 py-2"
+                class="btn btn-primary px-4 py-2 mt-4"
                 href="assets/Nikhil_Waykos-Resume.pdf"
                 download=""
               >
@@ -136,10 +130,10 @@
               </a>
             </div>
           </div>
-          <div id="about" class="row h-100 pt-6">
-            <div class="col">
+          <div id="about" class="row h-100 align-items-center pt-6">
+            <div class="col-md-8">
               <h2 class="title">About Me</h2>
-              <p class="body px-5">
+              <p class="body">
                 &emsp;&emsp;&emsp;Hey folks! I am professionally experienced as
                 a <b>Software Development Engineer in Test</b> with a duration
                 of 1 year plus. Strongly possesses application development
@@ -153,6 +147,18 @@
                 position in a growth-oriented company where my skills are
                 utilized in the maximum possible ways.
               </p>
+            </div>
+            <div class="col-md-4">
+              <lottie-player
+                src="https://assets8.lottiefiles.com/private_files/lf30_wqypnpu5.json"
+                background="transparent"
+                speed="1"
+                style="width: 300px; height: 300px"
+                loop
+                autoplay
+              ></lottie-player>
+            </div>
+            <div class="col-md-12">
               <div class="hz-line"></div>
             </div>
           </div>
@@ -197,7 +203,7 @@
                           <h6>React</h6>
                         </div>
                         <div class="col">
-                          <img src="images/nodejs.png" alt="" />
+                          <img src="images/nodejs.webp" alt="" />
                           <h6>NodeJS</h6>
                         </div>
                         <div class="col">
@@ -214,11 +220,7 @@
                       <h4>DB & Platforms</h4>
                       <div class="row">
                         <div class="col">
-                          <img src="images/mysql.png" alt="" />
-                          <h6>MySQL</h6>
-                        </div>
-                        <div class="col">
-                          <img src="images/MongoDB.png" alt="" />
+                          <img src="images/mongodb.svg" alt="" />
                           <h6>MongoDB</h6>
                         </div>
                         <div class="col">
@@ -226,8 +228,12 @@
                           <h6>Firebase</h6>
                         </div>
                         <div class="col">
+                          <img src="images/mysql.png" alt="" />
+                          <h6>MySQL</h6>
+                        </div>
+                        <div class="col">
                           <img src="images/gcp.png" alt="" />
-                          <h6>Google Cloud Platforms</h6>
+                          <h6>Google Cloud</h6>
                         </div>
                       </div>
                     </div>
@@ -301,18 +307,25 @@
             <div class="col">
               <h2 class="title">Projects</h2>
               <div class="div-project">
-                <ul class="project-menu">
-                  <li>Maitrik E-Commerce Platform</li>
-                  <li>Covid-19 Patient’s Report Tracking Application</li>
-                  <li>AnkurGECA Website</li>
-                  <li>Maks Clean Systems</li>
+                <ul id="project-menu" class="project-menu">
+                  <li class="active" onclick="showProjectDetails(0);">
+                    Maitrik E-Commerce Platform
+                  </li>
+                  <li onclick="showProjectDetails(1);">
+                    Covid-19 Patient’s Report Tracking Application
+                  </li>
+                  <li onclick="showProjectDetails(2);">AnkurGECA Website</li>
+                  <li onclick="showProjectDetails(3);">Maks Clean Systems</li>
                 </ul>
                 <div class="project-content">
-                  <h3>Maitrik E-Commerce Platform</h3>
+                  <h3 id="project-headline">Maitrik E-Commerce Platform</h3>
                   <h4>Technical Stack:</h4>
-                  <p>React, Android</p>
+                  <p id="project-tech">
+                    React, Redux, Redux Saga, Android (Kotlin), NodeJS,
+                    ExpressJS, Firebase, Google Cloud Platform
+                  </p>
                   <h4>Details:</h4>
-                  <ul>
+                  <ul id="project-details">
                     <li>
                       An E-Commerce platform for connecting wholesalers and
                       retailers across pan India.
@@ -372,11 +385,86 @@
               <div class="hz-line"></div>
             </div>
           </div>
-          <!-- <footer>
-            <a href="">Credits</a>
-          </footer> -->
+          <div id="contact" class="row h-100 pt-6">
+            <div class="col">
+              <h2 class="title">Send me a message</h2>
+              <div class="row">
+                <div class="col-md-6">
+                  <form id="contact-form">
+                    <div class="input-group">
+                      <label for="name">Your name</label>
+                      <input type="text" name="name" id="name" required />
+                    </div>
+                    <div class="input-group">
+                      <label for="email">Your email address</label>
+                      <input type="email" name="email" id="email" required />
+                    </div>
+                    <div class="input-group">
+                      <label for="phone">Contact no.</label>
+                      <input type="tel" name="phone" id="phone" />
+                    </div>
+                    <div class="input-group">
+                      <label for="message">Message</label>
+                      <textarea name="message" id="message" rows="3"></textarea>
+                    </div>
+                    <input
+                      type="button"
+                      value="Send"
+                      class="btn btn-primary"
+                      onclick="sendMessage()"
+                    />
+                  </form>
+                </div>
+
+                <div class="col-md-6">
+                  <lottie-player
+                    class="mx-auto"
+                    src="https://assets10.lottiefiles.com/packages/lf20_COamaylcrm.json"
+                    background="transparent"
+                    speed="1"
+                    style="width: 300px; height: 300px"
+                    loop
+                    autoplay
+                  ></lottie-player>
+                  <!-- <lottie-player
+                    src="images/contact-section.json"
+                    background="transparent"
+                    speed="1"
+                    style="width: 300px; height: 300px"
+                    loop
+                    autoplay
+                  ></lottie-player> -->
+                </div>
+              </div>
+              <!-- <div class="hz-line"></div> -->
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </body>
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+  ></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("user_kQi28F1BPljLvMRLazt5f");
+    })();
+
+    function sendMessage() {
+      const info = getMessageInfo();
+      if (info.isValid) {
+        emailjs.send("service_2e6gkzr", "template_imgkblr", info.value);
+        window.alert(
+          "Thank you for contacting! Successfully sent your message."
+        );
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    AOS.refresh();
+  </script>
 </html>
