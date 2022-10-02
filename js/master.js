@@ -72,3 +72,15 @@ function getMessageInfo() {
 
   return { value: info, isValid };
 }
+
+function navToggle() {
+  const nav = document.getElementById("nav");
+  if (
+    nav.className === "expanded" ||
+    (window.innerWidth > 600 && nav.className === "desktop-extended")
+  ) {
+    nav.className = "";
+  } else {
+    nav.className = "expanded";
+  }
+}

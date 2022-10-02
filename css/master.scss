@@ -55,11 +55,12 @@ body {
 nav {
   z-index: 100;
   position: absolute;
-  left: 0;
-  right: 0;
+  width: 94%;
+  margin: 2% 3%;
+  // left: 0;
+  // right: 0;
   // width: calc(50%-15%);
-  margin: 28px 48px;
-  border-radius: 8px;
+  // margin: 28px 48px;
   display: flex;
   padding: 18px 12px;
   /* From https://css.glass */
@@ -70,14 +71,21 @@ nav {
   -webkit-backdrop-filter: blur(5.7px);
   border: 1px solid rgba(130, 130, 131, 0.24);
 }
-nav div:last-child {
+nav ul {
   flex-grow: 1;
   display: flex;
   justify-content: end;
   text-align: right;
+  list-style: none;
+  margin-bottom: 0;
+
+  li:last-child {
+    display: none;
+  }
 }
 .nav-link {
   margin: 0 20px;
+  word-wrap: nowrap;
 }
 h1 {
   font-size: 56px !important;
@@ -96,6 +104,7 @@ h1 {
   letter-spacing: 1px;
   word-spacing: 4px;
   margin-bottom: 48px;
+  margin-top: 48px;
 }
 .body {
   letter-spacing: 1px;
@@ -113,8 +122,8 @@ h1 {
 .hz-line {
   width: 12%;
   margin: auto;
-  margin-top: 15vh;
-  margin-bottom: 20px;
+  margin-top: 16px;
+  margin-bottom: 32px;
   padding: 2px;
   background-color: #fff;
   border-radius: 16px;
@@ -124,6 +133,7 @@ h1 {
 
 .gooey {
   margin: auto;
+  margin-bottom: 48px;
   background-image: linear-gradient(120deg, #34e0f0 0%, #b400ff 100%);
   border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
   width: 300px;
@@ -203,6 +213,7 @@ h1 {
   h4 {
     font-size: 24px;
     font-weight: 500;
+    padding-bottom: 16px;
   }
   div {
     text-align: center;
@@ -362,7 +373,7 @@ h1 {
       // height: max-content;
       font-weight: 500;
       letter-spacing: 1px;
-      height: 80px;
+      height: 78px;
       padding: 16px;
       margin-left: 0;
       // border: 1px solid red;
@@ -370,6 +381,12 @@ h1 {
       border-top-left-radius: 32px;
       border-bottom-left-radius: 32px;
       cursor: pointer;
+      display: flex;
+
+      span {
+        display: block !important;
+        margin: 0 4px;
+      }
     }
 
     li:hover,
@@ -380,6 +397,7 @@ h1 {
   }
   .project-content {
     width: 70%;
+    height: 380px;
     // flex-grow: 1;
     padding: 16px;
     // border: 1px solid red;
@@ -400,6 +418,9 @@ h1 {
     p {
       font-weight: 300;
     }
+    #project-tech {
+      line-height: 20px !important;
+    }
 
     ul {
       font-weight: 300;
@@ -417,6 +438,7 @@ h1 {
 
   li {
     margin-bottom: 24px;
+    padding-left: 12px;
 
     span {
       font-size: 14px;
@@ -489,5 +511,229 @@ form {
     display: block;
     margin: auto;
     padding: 8px 48px;
+  }
+}
+.content {
+  min-height: 100%;
+}
+// for mobile devices
+@media only screen and (max-width: 600px) {
+  .side-nav {
+    display: none;
+  }
+
+  nav {
+    position: fixed;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    padding: 18px 0;
+    margin: 16px;
+    box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255, 255, 255, 0.5),
+      inset -0.2em -0.2em 0.2em 0 rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease-in-out;
+    flex-direction: column;
+
+    .menu-icon {
+      padding: 24px !important;
+      margin: 24px;
+    }
+
+    ul {
+      position: absolute;
+      overflow: hidden;
+
+      // margin: -99999px 0 0 -50px;
+      padding: 0;
+      visibility: hidden;
+      transform-origin: 0% 0%;
+      transform: translate(0, -100%);
+
+      transition: visibility 0s 0.2s,
+        transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+
+      flex-direction: column;
+      text-align: left;
+      padding-left: 0;
+      margin-top: 24px;
+
+      li {
+        padding-bottom: 12px;
+
+        a {
+          font-weight: 400;
+          font-size: 18px !important;
+        }
+      }
+
+      li:last-child {
+        display: flex;
+        justify-content: space-around;
+        padding: 0 12px;
+
+        a {
+          font-size: 32px !important;
+          color: #000a;
+        }
+      }
+    }
+  }
+
+  .expanded {
+    border-radius: 16px;
+    opacity: 1;
+    width: 200px;
+    height: 430px;
+
+    ul {
+      overflow: unset;
+      position: static;
+      visibility: unset;
+      transform: none;
+
+      transition: margin 0s 0s, padding 0s 0s, visibility 0s 0.2s,
+        transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    }
+  }
+
+  #home {
+    height: auto !important;
+    h1 {
+      font-size: 24px !important;
+      line-height: 42px !important;
+    }
+
+    .col:last-child {
+      text-align: center;
+    }
+  }
+
+  #about {
+    height: auto !important;
+
+    p {
+      line-height: 24px !important;
+    }
+  }
+
+  p {
+    font-size: 14px !important;
+    line-height: 14px !important;
+
+    b {
+      font-size: 16px !important;
+    }
+  }
+
+  .content {
+    min-height: auto !important;
+  }
+
+  h4,
+  h3 {
+    font-size: 18px !important;
+  }
+  h6 {
+    font-size: 14px !important;
+  }
+
+  #certifications {
+    li {
+      font-size: 14px;
+    }
+  }
+
+  .div-project {
+    flex-direction: column;
+    .project-menu {
+      width: 100% !important;
+      display: flex;
+      margin-bottom: 0;
+      border-radius: 32px 32px 0 0;
+      li {
+        height: auto !important;
+        display: block !important;
+        width: 25% !important;
+        text-align: center;
+        margin: 0;
+      }
+      span:last-child {
+        display: none !important;
+      }
+      .active {
+        border-radius: 32px 32px 0 0;
+      }
+    }
+
+    .project-content {
+      width: 100%;
+      height: auto;
+      border-radius: 0 0 32px 32px;
+    }
+  }
+
+  .timeline-card:nth-child(odd)::before {
+    top: -4.5px !important;
+  }
+  .timeline-card:nth-child(even)::before {
+    top: 1.5px !important;
+  }
+
+  #contact-form {
+    padding: 0 5% !important;
+    .input-group {
+      width: 100% !important;
+      padding: 0 !important;
+    }
+  }
+  .content-div {
+    height: auto !important;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  nav {
+    border-radius: 50%;
+    width: 4.8%;
+    margin: 2% 3%;
+    transition: width 0.5s, border-radius 0.5s;
+
+    #menu-icon {
+      width: 48px !important;
+      margin: auto !important;
+      text-align: left;
+      margin-left: -12px !important;
+    }
+
+    ul {
+      position: absolute !important;
+      overflow: hidden;
+
+      // margin: -99999px 0 0 -50px;
+      padding: 0;
+      visibility: hidden !important;
+      transform-origin: 0% 0%;
+      transform: translate(-100%, 0);
+
+      transition: visibility 0s 0.1s,
+        transform 0.5s cubic-bezier(0.77, 0.5, 0.5, 2);
+    }
+  }
+
+  .expanded,
+  .desktop-extended {
+    // right: 0;
+    border-radius: 16px;
+    width: 94%;
+    transition: width 0.5s, border-radius 0.5s;
+    ul {
+      overflow: unset !important;
+      position: static !important;
+      visibility: unset !important;
+      transform: none;
+
+      transition: visibility 0s 0.3s,
+        transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    }
   }
 }
