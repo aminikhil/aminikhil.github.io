@@ -70,6 +70,10 @@ nav {
   backdrop-filter: blur(1.7px);
   -webkit-backdrop-filter: blur(5.7px);
   border: 1px solid rgba(130, 130, 131, 0.24);
+
+  #menu-icon a {
+    pointer-events: none;
+  }
 }
 nav ul {
   flex-grow: 1;
