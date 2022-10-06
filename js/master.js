@@ -1,6 +1,6 @@
 var projectList = [
   {
-    title: "Maitrik E-Commerce Platform",
+    title: "E-Commerce Platform",
     stack:
       "React, Redux, Redux Saga, Android (Kotlin), NodeJS, ExpressJS, Firebase, Google Cloud Platform",
     details: [
@@ -11,7 +11,7 @@ var projectList = [
     ],
   },
   {
-    title: "Covid-19 Patient’s Report Tracking Application",
+    title: "Covid-19 Patient’s Health Tracking Application",
     stack: "React, Redux, Redux Saga, Firebase",
     details: [
       "Platform for Doctors to monitor home quarantine patients health with daily updated details of oxygen level, temperature and pulse rate.",
@@ -20,14 +20,14 @@ var projectList = [
     ],
   },
   {
-    title: "AnkurGECA Website",
+    title: "Website for AnkurGECA",
     stack: "HTML, CSS, JavaScript, PHP",
     details: [
       'Website URL: <b><a target="_blank" href="https://ankur.geca.ac.in">https://ankur.geca.ac.in</a></b>',
     ],
   },
   {
-    title: "Maks Clean Systems",
+    title: "Website for Maks Clean Systems",
     stack: "React",
     details: [
       'Website URL: <b><a target="_blank" href="https://makscleansystems.com">https://makscleansystems.com/</a></b>',
