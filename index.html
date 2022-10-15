@@ -36,11 +36,26 @@
     <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
   </head>
   <body>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-D6YYLJ170Z"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-D6YYLJ170Z");
+    </script>
+
     <div class="main">
       <div class="side-nav">
         <div>
           <a
-            href="https://www.linkedin.com/in/nikhil-waykos-083610146"
+            href="https://in.linkedin.com/in/nikhil-waykos-083610146"
             target="_blank"
             class="nav-icon"
           >
@@ -90,7 +105,7 @@
             <li>
               <a href="#about" class="nav-link">About Me</a>
             </li>
-            <li><a href="#skills-stack" class="nav-link">Skills Stack</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
             <li><a href="#timeline" class="nav-link">Timeline</a></li>
             <li><a href="#projects" class="nav-link">Projects</a></li>
             <li>
@@ -166,18 +181,20 @@
             <div class="col col-lg-8 col-sm-12">
               <h1>
                 &lt; Hello World!<br />
-                I am
-                <!-- <br /> -->
-                Nikhil Waykos
+                I'm Nikhil Waykos,
                 <br />
                 a Full Stack Developer. /&gt;
               </h1>
               <a
                 type="button"
-                class="btn btn-primary px-4 py-2 mt-4"
+                class="btn btn-primary px-4 py-2 mt-4 animated-button"
                 href="assets/Nikhil_Waykos-Resume.pdf"
                 download=""
               >
+                <!-- <span></span>
+                <span></span>
+                <span></span>
+                <span></span> -->
                 <i class="fa-solid fa-download"></i>
                 Download Resume
               </a>
@@ -219,9 +236,9 @@
               <div class="hz-line"></div>
             </div>
           </div>
-          <div id="skills-stack" class="row content">
+          <div id="skills" class="row content">
             <div class="col-12">
-              <h2 class="title">Skills Stack</h2>
+              <h2 class="title">Skills</h2>
             </div>
             <div class="col col-xs-12">
               <div
@@ -246,7 +263,7 @@
                         </div>
                         <div class="col">
                           <img src="images/cpp.png" alt="" />
-                          <h6>c++</h6>
+                          <h6>C++</h6>
                         </div>
                       </div>
                     </div>
@@ -255,19 +272,22 @@
                 <div class="col">
                   <div class="gooey">
                     <div class="gooey-content">
-                      <h4>Frameworks</h4>
+                      <h4>
+                        Front-End &amp;<br />
+                        Back-End
+                      </h4>
                       <div class="row">
                         <div class="col">
                           <img src="images/react.png" alt="" />
                           <h6>React</h6>
                         </div>
                         <div class="col">
-                          <img src="images/nodejs.webp" alt="" />
-                          <h6>NodeJS</h6>
-                        </div>
-                        <div class="col">
                           <img src="images/android.png" alt="" />
                           <h6>Android</h6>
+                        </div>
+                        <div class="col">
+                          <img src="images/nodejs.webp" alt="" />
+                          <h6>NodeJS</h6>
                         </div>
                       </div>
                     </div>
@@ -276,7 +296,7 @@
                 <div class="col">
                   <div class="gooey">
                     <div class="gooey-content">
-                      <h4>DB & Platforms</h4>
+                      <h4>DB & Cloud</h4>
                       <div class="row">
                         <div class="col">
                           <img src="images/mongodb.svg" alt="" />

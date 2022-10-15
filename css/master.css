@@ -251,7 +251,7 @@ h1 {
   margin: 4px;
 }
 .gooey-content div img {
-  width: 36px;
+  height: 36px;
   margin: auto;
 }
 .gooey-content div h6 {
@@ -721,4 +721,10 @@ h3 {
     transform: none;
     transition: visibility 0s 0.3s, transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
+}
+.btn {
+  background: linear-gradient(120deg, rgba(0, 67, 255, 0.55) 0%, rgba(0, 103, 255, 0.89) 100%);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  transform: translate(0%, 0%);
 }/*# sourceMappingURL=master.css.map */
