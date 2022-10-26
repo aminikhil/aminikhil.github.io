@@ -4,19 +4,19 @@ var projectList = [
     stack:
       "React, Redux, Redux Saga, Android (Kotlin), NodeJS, ExpressJS, Firebase, Google Cloud Platform",
     details: [
-      "An E-Commerce platform for connecting wholesalers and retailers across pan India.",
-      "Developed front-end in React with Material UI library, state management tools Redux, Redux Saga.",
-      "Developed back-end REST API using ExpressJs with Firestore NoSQL database and deployed on App Engine.",
-      "Developed auto trigger Firebase Cloud Functions.",
+      "An e-commerce platform for connecting wholesalers and retailers across pan India.",
+      "Developed Admin & Wholesalers application in React and state management tools like Redux and Redux Saga.",
+      "Developed REST API using Express.js with Firestore NoSQL database and deployed on Google App Engine.",
+      "Developed auto-triggered Firebase Cloud Functions (Serverless Application).",
     ],
   },
   {
-    title: "Covid-19 Patient’s Health Tracking Application",
+    title: "Covid-19 Patients' Health Tracking Application",
     stack: "React, Redux, Redux Saga, Firebase",
     details: [
-      "Platform for Doctors to monitor home quarantine patients health with daily updated details of oxygen level, temperature and pulse rate.",
-      "Developed web app in React, Redux, Redux Saga and Firestore NoSQL database, Firebase at Backend.",
-      "Developed back-end with user management using Firebase Auth, Firestore NoSQL database.",
+      "Platform for Doctors to daily monitor home quarantine patients’ health with details of their oxygen level, temperature, and pulse rate.",
+      "Developed a progressive web app in React and state management tools like Redux and Redux Saga.",
+      "Used user authentication and authorization Firebase Auth service, Firestore NoSQL database.",
     ],
   },
   {
